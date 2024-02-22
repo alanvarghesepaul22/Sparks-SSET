@@ -9,8 +9,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Sparks-SSET",
-  description: "Made by HackieTechs24",
+  title: "Sparks - Talents showcasing platform",
+  description: "Made by CSE'20-24 of SSET",
 };
 
 export default function RootLayout({ children }) {

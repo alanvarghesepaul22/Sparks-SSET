@@ -7,7 +7,7 @@ const Footer = () => {
         Sparks &copy; {new Date().getFullYear()}. All rights reserved.
       </p>
       <p className="text-xs text-foreground/30">
-        Made by Team CSE&apos;20-24
+        Made by Team CSE&apos;20-24 SSET
       </p>
     </div>
   );
