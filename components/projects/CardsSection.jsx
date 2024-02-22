@@ -4,7 +4,7 @@ import Loading from "./Loading";
 import ProjectCards from "./ProjectCards";
 import PaginationElement from "./Pagination";
 import NoProjectsFound from "./NoProjectsFound";
-import { CardSkeleton } from "./CardSkeleton";
+// import { CardSkeleton } from "./CardSkeleton";
 
 const CardsSection = () => {
   const [projects, setProjects] = useState([]);
@@ -36,8 +36,8 @@ const CardsSection = () => {
     fetchData();
   }, []);
   if (isLoading) {
-    // return <Loading />;
-    return <CardSkeleton itemCount={projects.length} />;
+    return <Loading />;
+    // return <CardSkeleton itemCount={projects.length} />;
   }
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;

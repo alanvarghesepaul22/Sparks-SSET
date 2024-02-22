@@ -20,7 +20,6 @@ const Page = async ({ params }) => {
   await NoSession();
   const { id } = params;
   const projectData = await getPaperById(id);
-  console.log(projectData);
   return (
     <div>
       <div className="w-full flex justify-center mt-8">

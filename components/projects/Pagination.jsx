@@ -55,7 +55,7 @@ const PaginationElement = ({
                 onClick={() => {
                   paginate(number);
                 }}
-                className={"cursor-pointer"}
+                className={`cursor-pointer ${currentPage==number?"border-2":null}`}
               >
                 {number}
               </PaginationLink>

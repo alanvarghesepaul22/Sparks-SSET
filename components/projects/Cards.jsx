@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { Button } from "../ui/button";
 import DeleteBtn from "./DeleteBtn";
 import { useSession } from "next-auth/react";
@@ -14,7 +14,7 @@ import { Info } from "lucide-react";
 
 const Cards = ({ data }) => {
   const { data: session } = useSession();
-  const uniqueColor = generateUniqueGradientColor(data._id);
+  const uniqueColor = generateUniqueGradientColor(data.owner);
   return (
     <div className="w-[300px] h-fit flex flex-col p-3 hover:bg-zinc-200/50 transition-all duration-500 hover:shadow-md">
       <Link href={data.url} target="_blank">
@@ -31,18 +31,6 @@ const Cards = ({ data }) => {
       <div className="mt-3">
         <div className="flex justify-between">
           <p className="font-bold">{data.title}</p>
-          <div className="hidden items-center gap-2">
-            <p>3</p>
-            <FaHeart className="text-red-300 hover:text-red-400" />
-          </div>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex justify-start text-sm font-semibold text-zinc-500 gap-2">
-            <p>{data.owner}</p>
-            <p>
-              {data.dept} {data.sem}
-            </p>
-          </div>
           <div>
             <HoverCard>
               <HoverCardTrigger>
@@ -51,6 +39,19 @@ const Cards = ({ data }) => {
               <HoverCardContent>{data.desc}</HoverCardContent>
             </HoverCard>
           </div>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex justify-start text-xs font-semibold text-zinc-500 gap-2">
+            <p>{data.owner}</p>
+            <p>
+              {data.dept} {data.sem}
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Link href={data.srcCode} target="_blank">
+              <FaGithub className="text-violet-900 h-6 w-6"/>
+            </Link>
+          </div> 
         </div>
       </div>
       {session?.user?.email === data.email ? (

@@ -23,7 +23,8 @@ const AddProjectsForm = () => {
   const [owner, setOwner] = useState("");
   const [dept, setDept] = useState("");
   const [sem, setSem] = useState("");
-  const [url, setUrl] = useState("");  
+  const [url, setUrl] = useState("");
+  const [srcCode, setSrcCode] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,6 +59,7 @@ const AddProjectsForm = () => {
           dept,
           sem,
           url,
+          srcCode,
         }),
       });
 
@@ -167,6 +169,17 @@ const AddProjectsForm = () => {
                 </SelectContent>
               </Select>
             </div>
+          </div>
+
+          <div>
+            <Label htmlFor="srcCode">Project Source code link (optional)</Label>
+            <Input
+              onChange={(e) => setSrcCode(e.target.value)}
+              type="text"
+              id="srcCode"
+              placeholder="Paste Source code link"
+              className="inputFields"
+            />
           </div>
 
           <div>

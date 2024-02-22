@@ -26,6 +26,10 @@ const projectSchema = new Schema(
       type: String,
       required: true,
     },
+    srcCode: {
+      type: String,
+      required: true,
+    },
     url: {
       type: String,
       required: true,

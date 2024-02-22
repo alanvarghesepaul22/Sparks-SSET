@@ -7,10 +7,9 @@ import { authOptions } from "../auth/[...nextauth]/route.js";
 export async function POST(req) {
   const session = await getServerSession(authOptions);
   const email = session?.user?.email;
-console.log(email);
 
   try {
-    const { title, desc, owner, dept, sem, url } = await req.json();
+    const { title, desc, owner, dept, sem, url, srcCode } = await req.json();
 
     await connection();
     await Project.create({
@@ -21,6 +20,7 @@ console.log(email);
       dept,
       sem,
       url,
+      srcCode,
     });
 
     return NextResponse.json({ message: "Project added." }, { status: 201 });

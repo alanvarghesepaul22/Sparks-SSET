@@ -11,6 +11,7 @@ export const PUT = async (req, { params }) => {
     newDept: dept,
     newSem: sem,
     newUrl: url,
+    newSrcCode: srcCode,
   } = await req.json();
   await connection();
   await Project.findByIdAndUpdate(id, {
@@ -20,6 +21,7 @@ export const PUT = async (req, { params }) => {
     dept,
     sem,
     url,
+    srcCode,
   });
   return NextResponse.json({ message: "Project Updated" }, { status: 200 });
 };

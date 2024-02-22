@@ -16,7 +16,7 @@ import { useToast } from "../ui/use-toast";
 import { useRouter } from "next/navigation";
 
 const EditProjectsForm = ({ data }) => {
-  const { _id:id,title, desc, owner, dept, sem, url } = data;
+  const { _id: id, title, desc, owner, dept, sem, url } = data;
   const router = useRouter();
   const { toast } = useToast();
   const [newTitle, setNewTitle] = useState(title);
@@ -25,6 +25,7 @@ const EditProjectsForm = ({ data }) => {
   const [newDept, setNewDept] = useState(dept);
   const [newSem, setNewSem] = useState(sem);
   const [newUrl, setNewUrl] = useState(url);
+  const [newSrcCode, setNewSrcCode] = useState(url);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,6 +60,7 @@ const EditProjectsForm = ({ data }) => {
           newDept,
           newSem,
           newUrl,
+          newSrcCode,
         }),
       });
 
@@ -172,6 +174,18 @@ const EditProjectsForm = ({ data }) => {
                 </SelectContent>
               </Select>
             </div>
+          </div>
+
+          <div>
+            <Label htmlFor="srcCode">Project Source code link (optional)</Label>
+            <Input
+              onChange={(e) => setNewSrcCode(e.target.value)}
+              value={newUrl}
+              type="text"
+              id="srcCode"
+              placeholder="Paste Source code link"
+              className="inputFields"
+            />
           </div>
 
           <div>
