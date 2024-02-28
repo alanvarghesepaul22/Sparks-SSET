@@ -15,7 +15,7 @@ const Navbar = () => {
   const { data: session } = useSession();
   return (
     <nav
-      className={`flex justify-between items-center w-full py-4 px-10 ${
+      className={`flex justify-between items-center w-full py-4 px-4 md:px-10 ${
         pathname === "/" ? "bg-sky-100" : "bg-transparent"
       }`}
     >
