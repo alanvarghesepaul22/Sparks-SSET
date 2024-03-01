@@ -99,6 +99,7 @@ const AddProjectsForm = () => {
               id="title"
               placeholder="Enter Title"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -111,6 +112,7 @@ const AddProjectsForm = () => {
               id="desc"
               placeholder="Enter Description"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -123,6 +125,7 @@ const AddProjectsForm = () => {
               id="owner"
               placeholder="Enter owner's name"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -179,6 +182,7 @@ const AddProjectsForm = () => {
               id="srcCode"
               placeholder="Paste Source code link"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -191,6 +195,7 @@ const AddProjectsForm = () => {
               id="url"
               placeholder="Paste URL here"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
           <div className="flex justify-end">

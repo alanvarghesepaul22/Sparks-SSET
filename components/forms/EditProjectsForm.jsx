@@ -100,6 +100,7 @@ const EditProjectsForm = ({ data }) => {
               id="title"
               placeholder="Enter Title"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -113,6 +114,7 @@ const EditProjectsForm = ({ data }) => {
               id="desc"
               placeholder="Enter Description"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -126,6 +128,7 @@ const EditProjectsForm = ({ data }) => {
               id="owner"
               placeholder="Enter owner's name"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -185,6 +188,7 @@ const EditProjectsForm = ({ data }) => {
               id="srcCode"
               placeholder="Paste Source code link"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
 
@@ -198,6 +202,7 @@ const EditProjectsForm = ({ data }) => {
               id="url"
               placeholder="Paste URL here"
               className="inputFields"
+              autoComplete="off"
             />
           </div>
           <div className="flex justify-end">
